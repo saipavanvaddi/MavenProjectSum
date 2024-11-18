@@ -6,28 +6,39 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
 
+  <!-- Specify JDK 21 properties -->
+  <properties>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
+  </properties>
+
   <dependencies>
-    <!-- Add Jakarta Servlet API dependency -->
+    <!-- Jakarta Servlet API dependency -->
     <dependency>
       <groupId>jakarta.servlet</groupId>
       <artifactId>jakarta.servlet-api</artifactId>
-      <version>5.0.0</version> <!-- Ensure compatibility with your server -->
+      <version>6.0.0</version> <!-- Compatible with Java 21 -->
       <scope>provided</scope>
     </dependency>
   </dependencies>
 
   <build>
     <plugins>
+      <!-- Maven Compiler Plugin -->
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version>
+        <version>3.10.1</version> <!-- Ensure this version or higher for JDK 21 -->
         <configuration>
-          <release>11</release> <!-- Changed from 19 to 11 -->
+          <release>21</release>
         </configuration>
       </plugin>
+
+      <!-- Maven WAR Plugin -->
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
-        <version>3.2.3</version>
+        <version>3.4.0</version>
       </plugin>
     </plugins>
   </build>
