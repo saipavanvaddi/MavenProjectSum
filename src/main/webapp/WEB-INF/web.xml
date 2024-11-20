@@ -19,4 +19,14 @@
     <servlet-name>AddServlet</servlet-name>
     <url-pattern>/AddServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>A7</display-name>
+    <servlet-name>A7</servlet-name>
+    <servlet-class>com.DemoApp.A7</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>A7</servlet-name>
+    <url-pattern>/A7</url-pattern>
+  </servlet-mapping>
 </web-app>
